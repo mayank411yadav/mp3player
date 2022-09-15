@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Mp3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rCx-tp-tNn">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="67" translatesAutoresizingMaskIntoConstraints="NO" id="1bx-sm-DeZ">
+                                        <rect key="frame" x="50" y="254" width="275" height="31"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9nV-fY-c4r">
+                                                <rect key="frame" x="0.0" y="0.0" width="40.5" height="31"/>
+                                                <color key="backgroundColor" systemColor="labelColor"/>
+                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="play" catalog="system"/>
+                                                <connections>
+                                                    <action selector="onClickedPlay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OcT-ZD-iPb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OZN-fV-6A9">
+                                                <rect key="frame" x="107.5" y="0.0" width="42.5" height="31"/>
+                                                <color key="backgroundColor" systemColor="labelColor"/>
+                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="arrow.counterclockwise" catalog="system">
+                                                    <attributedString key="attributedTitle"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="onClickedReplay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1H7-Ov-gFg"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8CP-QN-6Rs">
+                                                <rect key="frame" x="217" y="0.0" width="58" height="31"/>
+                                                <color key="backgroundColor" systemColor="labelColor"/>
+                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="pause.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="onClickedPause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wds-Y8-FeL"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="musicIMG" translatesAutoresizingMaskIntoConstraints="NO" id="vbg-BA-7Ai">
+                                        <rect key="frame" x="8" y="40" width="359" height="198"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="198" id="T0O-aN-caR"/>
+                                            <constraint firstAttribute="width" constant="359" id="bqN-HX-LI6"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="1bx-sm-DeZ" secondAttribute="trailing" constant="50" id="ASr-Xm-ilB"/>
+                                    <constraint firstItem="1bx-sm-DeZ" firstAttribute="leading" secondItem="rCx-tp-tNn" secondAttribute="leading" constant="50" id="Kv8-E9-wEz"/>
+                                    <constraint firstItem="vbg-BA-7Ai" firstAttribute="top" secondItem="rCx-tp-tNn" secondAttribute="top" constant="40" id="TXE-hE-w3a"/>
+                                    <constraint firstAttribute="trailing" secondItem="vbg-BA-7Ai" secondAttribute="trailing" constant="8" id="UEZ-Vj-xqI"/>
+                                    <constraint firstItem="vbg-BA-7Ai" firstAttribute="leading" secondItem="rCx-tp-tNn" secondAttribute="leading" constant="8" id="XMc-Uq-F5o"/>
+                                    <constraint firstItem="1bx-sm-DeZ" firstAttribute="top" secondItem="vbg-BA-7Ai" secondAttribute="bottom" constant="16" id="wda-cc-muU"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rCx-tp-tNn" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="4tj-rR-6Ra"/>
+                            <constraint firstItem="rCx-tp-tNn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Cw1-qK-LKM"/>
+                            <constraint firstItem="rCx-tp-tNn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Kgj-Uo-Wr9"/>
+                            <constraint firstItem="rCx-tp-tNn" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="tZy-lB-ITg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnPause" destination="8CP-QN-6Rs" id="GXE-H6-Ls4"/>
+                        <outlet property="btnPlay" destination="9nV-fY-c4r" id="z8R-Oj-ivJ"/>
+                        <outlet property="btnReplay" destination="OZN-fV-6A9" id="9KL-Gz-82V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="29.600000000000001" y="71.514242878560722"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.counterclockwise" catalog="system" width="115" height="128"/>
+        <image name="musicIMG" width="236" height="214"/>
+        <image name="pause.fill" catalog="system" width="116" height="128"/>
+        <image name="play" catalog="system" width="120" height="128"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
